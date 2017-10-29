@@ -297,21 +297,21 @@
             // сохранитьВРеестToolStripMenuItem
             // 
             this.сохранитьВРеестToolStripMenuItem.Name = "сохранитьВРеестToolStripMenuItem";
-            this.сохранитьВРеестToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.сохранитьВРеестToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.сохранитьВРеестToolStripMenuItem.Text = "сохранить в реест";
             this.сохранитьВРеестToolStripMenuItem.Click += new System.EventHandler(this.сохранитьВРеестToolStripMenuItem_Click);
             // 
             // извлечьИзРеестраToolStripMenuItem
             // 
             this.извлечьИзРеестраToolStripMenuItem.Name = "извлечьИзРеестраToolStripMenuItem";
-            this.извлечьИзРеестраToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.извлечьИзРеестраToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.извлечьИзРеестраToolStripMenuItem.Text = "извлечь из реестра";
             this.извлечьИзРеестраToolStripMenuItem.Click += new System.EventHandler(this.извлечьИзРеестраToolStripMenuItem_Click);
             // 
             // записатьВАвтозагрузкуToolStripMenuItem
             // 
             this.записатьВАвтозагрузкуToolStripMenuItem.Name = "записатьВАвтозагрузкуToolStripMenuItem";
-            this.записатьВАвтозагрузкуToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.записатьВАвтозагрузкуToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.записатьВАвтозагрузкуToolStripMenuItem.Text = "записать в автозагрузку";
             this.записатьВАвтозагрузкуToolStripMenuItem.Click += new System.EventHandler(this.записатьВАвтозагрузкуToolStripMenuItem_Click);
             // 
@@ -324,8 +324,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(344, 369);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
@@ -349,9 +348,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
