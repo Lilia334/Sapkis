@@ -59,6 +59,14 @@ namespace pr1
                     textBox1.Text += Symbol;
                 }
                 eventSymbol = Symbol;
+                if (Double.Parse(textBox1.Text) >= 0)
+                {
+                    negative = false;
+                }
+                else
+                {
+                    negative = true;
+                }
                
             }
         }
@@ -69,6 +77,7 @@ namespace pr1
 
             if (textBox1.Text != String.Empty)
             {
+                
                 
                     if (Char.IsDigit(textBox1.Text[textBox1.Text.Length - 1]))
                     {
@@ -81,7 +90,11 @@ namespace pr1
                     }
                     eventSymbol = opr;
                     textBox1.Text += eventSymbol;
-                
+                if (negative == true && eventSymbol=="-")
+                {
+                    textBox1.Text = "-" + textBox1.Text;
+                }
+
             }
         }
 
@@ -173,6 +186,7 @@ namespace pr1
             textBox1.Clear();
             FirstOperand = 0;
             SecondOperand = 0;
+            negative = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -219,6 +233,10 @@ namespace pr1
 
         private void button18_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text!=String.Empty && textBox1.Text[0] == '-')
+            {
+                textBox1.Text = textBox1.Text.Substring(1);
+            }
             
             if (textBox1.Text.Contains("-") || textBox1.Text.Contains(eventSymbol) && Char.IsDigit(textBox1.Text[textBox1.Text.Length - 1]))
             {
@@ -245,16 +263,22 @@ namespace pr1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (negative == true || textBox1.Text[0] == '-')
+            if (textBox1.Text != "")
+            {
+                if (negative == true || textBox1.Text[0] == '-')
                 {
-                negative = false;
-                textBox1.Text = textBox1.Text.Substring(textBox1.Text.IndexOf("-") + 1);
-                
-            } else {
-                negative = true;
-                textBox1.Text = "-" + textBox1.Text;
+                    negative = false;
+                    textBox1.Text = textBox1.Text.Substring(textBox1.Text.IndexOf("-") + 1);
 
+                }
+                else
+                {
+                    negative = true;
+                    textBox1.Text = "-" + textBox1.Text;
+
+                }
             }
+            
             
         }
 
